@@ -15,7 +15,6 @@ float CalculateAverage(std::list<int> listOfMarks) {
 
     // declaring
     int total = 0;
-    int numItems = 0;
     float average = 0;
 
     // process
@@ -23,9 +22,8 @@ float CalculateAverage(std::list<int> listOfMarks) {
         // get sum of contents of the list
         total = total + singleMark;
         // get the number of elements in list
-        numItems = numItems + 1;
     }
-    average = total / numItems;
+    average = total / listOfMarks.size();
     average = static_cast<int>(average);
     average = round(average);
 
